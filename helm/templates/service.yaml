@@ -7,11 +7,11 @@ spec:
     app: {{ .Values.deployment.name }}
 
   ports:
-    - name: {{ .Values.service.ports[0].name }}
-      port: {{ .Values.service.ports[0].port }}
-      nodePort: {{ .Values.service.ports[0].nodePort }}
+    - name: {{ .Values.service.ports.name }}
+      port: {{ .Values.service.ports.port }}
+      nodePort: {{ .Values.service.ports.nodePort }}
 
-    - name: {{ .Values.service.ports[1].name }}
-      port: {{ .Values.service.ports[1].port }}
+    - name: {{ .Values.service.ports.name }}
+      port: {{ .Values.service.ports.port }}
     
   type: {{ .Values.service.type }}
