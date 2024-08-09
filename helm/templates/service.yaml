@@ -11,9 +11,10 @@ spec:
     app: queue{{ .Values.deployment.name }}
 
   ports:
-    - name: http
-      port: 8161
-      nodePort: 30010
+    - name: http{{ .Values.service.ports[0].name }}
+      port: 8161{{ .Values.service.ports[0].port }}
+      nodePort: 30010{{ .Values.service.ports[0].nodePort }}
 
-    - name: endpoint
-      port: 61616
+    - name: endpoint{{ .Values.service.ports[1].name }}
+      port: 61616{{ .Values.service.ports[1].port }}
+  
