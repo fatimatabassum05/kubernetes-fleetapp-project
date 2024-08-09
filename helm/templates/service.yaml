@@ -17,4 +17,5 @@ spec:
 
     - name: endpoint{{ .Values.service.ports[1].name }}
       port: 61616{{ .Values.service.ports[1].port }}
-  
+    
+  type: NodePort{{ .Values.service.type }}
