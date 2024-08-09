@@ -12,6 +12,6 @@ spec:
       nodePort: {{ .Values.service.ports[0].nodePort }}
 
     - name: {{ .Values.service.ports[1].name }}
-      port:{ .Values.service.ports[1].port }}
+      port: {{ .Values.service.ports[1].port }}
     
-  type: NodePort{{ .Values.service.type }}
+  type: {{ .Values.service.type }}
