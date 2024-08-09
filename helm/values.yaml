@@ -12,6 +12,5 @@ service:
   selector:
     app: queue
   ports:
-    - name: http
       port: 8161
       nodePort: 30010
