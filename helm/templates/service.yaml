@@ -5,13 +5,8 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployment.name }}
-
   ports:
     - name: {{ .Values.service.ports.name }}
       port: {{ .Values.service.ports.port }}
-      nodePort: {{ .Values.service.ports.nodePort }}
-
-    - name: {{ .Values.service.ports.name }}
-      port: {{ .Values.service.ports.port }}
-    
+      nodePort: {{ .Values.service.ports.nodePort }}   
   type: {{ .Values.service.type }}
