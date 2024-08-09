@@ -1,0 +1,19 @@
+deployment:
+  name: queue
+  replicaCount: 1
+image:
+  repository: richardchesterwood/k8s-fleetman-queue
+  tag: release2
+namespace: dev
+service:
+  type: NodePort
+  name: fleetman-queue
+  type: NodePort
+  selector:
+    app: queue
+  ports:
+    - name: http
+      port: 8161
+      nodePort: 30010
+    - name: endpoint
+      port: 61616
